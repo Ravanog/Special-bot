@@ -149,7 +149,7 @@ async def start(client, message):
         
     if len(message.command) == 2 and message.command[1] in ["premium"]:
         buttons = [[
-                    InlineKeyboardButton('📲 ꜱᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ', user_id=int(767250672))
+                    InlineKeyboardButton('📲 ꜱᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ', user_id=int(7253187871))
                   ],[
                     InlineKeyboardButton('❌ ᴄʟᴏꜱᴇ ❌', callback_data='close_data')
                   ]]
@@ -202,7 +202,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/hbbotz')
+                          InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/+NABTLpcBvvU3MGY9')
                          ]
                        ] 
                     )
@@ -218,7 +218,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/hbbotz')
+                          InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/+NABTLpcBvvU3MGY9')
                          ]
                        ]
                     )
@@ -402,7 +402,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/hbbotz')
+                      InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/+NABTLpcBvvU3MGY9')
                      ]
                     ]
                 )
@@ -474,7 +474,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/hbbotz')
+                      InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/+NABTLpcBvvU3MGY9')
                      ]
                     ]
                 )
@@ -534,7 +534,7 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
               [
-                InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/hbbotz')
+                InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/+NABTLpcBvvU3MGY9')
                 ]
              ]
         )
