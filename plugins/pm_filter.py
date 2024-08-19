@@ -1458,7 +1458,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('⚙️ ꜰᴇᴀᴛᴜʀᴇꜱ', callback_data="help"),
-                    InlineKeyboardButton('🪙 ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ', callback_data='money_bot')
+                    InlineKeyboardButton('🪙 ᴄʜᴀɴɴᴇʟꜱ', callback_data='channels')
                 ],[
                     InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ᴍᴇ 💰', callback_data="shortlink_info")
                   ]]
@@ -1496,6 +1496,37 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         await query.message.edit_text(
             text=script.ALL_FILTERS.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+
+    elif query.data == "channels":
+        buttons = [[
+            InlineKeyboardButton('⚜️ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ⚜️', url='https://t.me/TG_UPDATES1')
+        ],[
+            InlineKeyboardButton('🔍 ɢʀᴏᴜᴘ1', url='https://t.me/+vvyFiHleok9lNjA1'),
+            InlineKeyboardButton('ɢʀᴏᴜᴘ2 🔎', url='https://t.me/KR_Movie2')
+        ],[
+            InlineKeyboardButton('✉️ HD ғɪʟᴇꜱ ᴄʜᴀɴɴᴇʟ ✉️', url='https://t.me/+vWVgg7PpKqEzMGZl')
+        ],[
+            InlineKeyboardButton('✨ ᴅᴠᴅ ғɪʟᴇꜱ ᴄʜᴀɴɴᴇʟ', url='https://t.me/+dZiBHNbI4l04MWE1'),
+            InlineKeyboardButton('🎉 ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ', url='https://t.me/+iLfZB23wdMJiNjQ1')
+        ],[
+            InlineKeyboardButton('⇇ ʙᴀᴄᴋ', callback_data='start'),
+            InlineKeyboardButton('ꜱᴜᴘᴘᴏʀᴛ 👮', url='https://t.me/TG_SUPPORT_GROUP')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="𝑳𝒐𝒅𝒊𝒏𝒈...."
+        )
+        await query.message.edit_text(
+            text="𝑳𝒐𝒅𝒊𝒏𝒈......"
+        )
+        await query.message.edit_text(
+            text="𝑫𝒐𝒏𝒆 ✅️"
+        )
+        await query.message.edit_text(
+            text=script.CHANNELS_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
