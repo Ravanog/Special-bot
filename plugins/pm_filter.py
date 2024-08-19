@@ -1532,12 +1532,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
 
     elif query.data == "money_bot":
+        if query.from_user.id not in ADMINS:
+            return await query.answer("⚠️ ᴀʟʀᴇᴀᴅʏ ʏᴏᴜ ᴀʀᴇ ɪɴ ғʀᴇᴇ ᴘʟᴀɴ ɪᴜꜱᴛ ᴇɴɪᴏʏ 😜 ɪᴛ !", show_alert=True)
         buttons = [[
-           InlineKeyboardButton('📲 ʀᴇғᴇʀ ɢᴇᴛ ᴘʀᴇᴍɪᴜᴍ', callback_data='free')
-        ],[   
-            InlineKeyboardButton('🪙 1 ᴍᴏɴᴛʜꜱ', callback_data='broze'),
-            InlineKeyboardButton('💎 1 ʏᴇᴀʀ ', callback_data='silver')
-        ],[
             InlineKeyboardButton('⇍ ʙᴀᴄᴋ', callback_data='start'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1716,9 +1713,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )       
 
     elif query.data == "seeplans":
+        if query.from_user.id not in ADMINS:
+            return await query.answer("⚠️ ᴀʟʀᴇᴀᴅʏ ʏᴏᴜ ᴀʀᴇ ɪɴ ғʀᴇᴇ ᴘʟᴀɴ ɪᴜꜱᴛ ᴇɴɪᴏʏ 😜 ɪᴛ !", show_alert=True)
         btn = [[
-            InlineKeyboardButton('📲 ꜱᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ', user_id=int(7253187871))
-        ],[
             InlineKeyboardButton('❌ ᴄʟᴏꜱᴇ ❌', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(btn)
@@ -1799,10 +1796,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ', url=f'https://t.me/hbbotz'),
+            InlineKeyboardButton('Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ', url=f'https://t.me/TG_UPDATES1'),
             InlineKeyboardButton('Dᴏɴᴀᴛɪᴏɴ', callback_data='source')
         ],[
-            InlineKeyboardButton('Rᴇᴘᴏʀᴛ Bᴜɢꜱ & Fᴇᴇᴅʙᴀᴄᴋ',url=f'https://t.me/+NABTLpcBvvU3MGY9')
+            InlineKeyboardButton('Rᴇᴘᴏʀᴛ Bᴜɢꜱ & Fᴇᴇᴅʙᴀᴄᴋ',url=f'https://t.me/+vWVgg7PpKqEzMGZl')
         ],[ 
             InlineKeyboardButton('Hᴏᴍᴇ', callback_data='start'),
             InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close_data')
