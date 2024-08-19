@@ -2153,7 +2153,7 @@ async def auto_filter(client, msg, spoll=False):
             return
         if len(message.text) < 100:
             search = message.text
-            m=await message.reply_text(f"<b><i> राधे राधे ❤️ '{search}' 🔎 मूवी को सर्च किया जा रहा है </i></b>")
+            m=await message.reply_text(f"<b><i>⚠️ '{search}' searching...</i></b>")
             search = search.lower()
             find = search.split(" ")
             search = ""
@@ -2175,10 +2175,10 @@ async def auto_filter(client, msg, spoll=False):
                 await m.delete()
                 if settings["spell_check"]:
                     st=await message.reply_sticker(sticker="CAACAgQAAxkBAAEq2R9mipkiW9ACyj7oQXznwKTPHqNCXQACkBUAA3mRUZGx4GwLX9XCHgQ")
-                    ai_sts = await message.reply_text('<b>𝑺𝒎𝒂𝒓𝒕 𝑺𝒆𝒂𝒓𝒄𝒉 𝑴𝒐𝒅𝒆 𝑶𝒏 ⚡. 𝑷𝒍𝒆𝒂𝒔𝒆 𝒘𝒂𝒊𝒕.</b>')
+                    ai_sts = await message.reply_text('<b>ꜱᴍᴀʀᴛ ᴍᴏᴅ ɪꜱ ᴏɴ ɪᴀᴍ ʀᴏᴄᴋɪɴɢ ⚡. ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ.</b>')
                     is_misspelled = await ai_spell_check(chat_id = message.chat.id,wrong_name=search)
                     if is_misspelled:
-                        await ai_sts.edit(f'<b>𝑺𝒎𝒂𝒓𝒕 𝑺𝒆𝒂𝒓𝒄𝒉 𝑺𝒖𝒈𝒈𝒆𝒔𝒕𝒆𝒅 🤖 <code>{is_misspelled}</code>\n𝑺𝒐 𝑰𝒎 𝑺𝒆𝒂𝒓𝒄𝒉𝒊𝒏𝒈 𝒇𝒐𝒓 🔎 <code>{is_misspelled}</code></b>')
+                        await ai_sts.edit(f'<b>ꜱᴍᴀʀᴛ ᴍᴏᴅ 𝑺𝒖𝒈𝒈𝒆𝒔𝒕𝒆𝒅 🤖 <code>{is_misspelled}</code>\n𝑺𝒐 ɪᴀᴍ ꜱᴇᴀʀᴄʜɪɴɢ ғᴏʀ 🔎 <code>{is_misspelled}</code></b>')
                         await asyncio.sleep(2)
                         message.text = is_misspelled
                         await st.delete()
@@ -2196,7 +2196,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-        m=await message.reply_text(f"<b><i> राधे राधे ❤️ '{search}' 🔎 मूवी को सर्च किया जा रहा है </i></b>")
+        m=await message.reply_text(f"<b><i> ⚠️ '{search}' searching... </i></b>")
         settings = await get_settings(message.chat.id)
         await msg.message.delete()
     # if 'is_shortlink' in settings.keys():
