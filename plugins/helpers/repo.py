@@ -1,7 +1,3 @@
-#codes created by @Hariomsingh31u
-#use this codes with proper credits
-
-
 import logging
 import os
 import requests
@@ -34,7 +30,7 @@ async def git(Kashmira, message):
 
 <b>Open Issues :</b> <i>{qw.get("open_issues")}</i>
 
-<b>Powed by :</b> @hbbotz
+<b>Powed by :</b> @KR_Movie2
 """
         if qw.get("description"):
             txt += f'<b>Description :</b> <code>{qw.get("description")}</code>'
